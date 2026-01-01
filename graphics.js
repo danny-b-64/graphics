@@ -1,16 +1,9 @@
-const GRAPHICS_LAYER = Object.freeze({
-  TOP_UI: 0,
-  UI: 1,
-  FOREGROUND: 2,
-  MIDGROUND: 3,
-  BACKGROUND: 4
-});
-const ATTEMPT = Object.freeze({
+export const ATTEMPT = Object.freeze({
   SUCCESS: true,
   FAIL: false
 });
 
-class GRAPHICS {
+export default class GRAPHICS {
   constructor(canvas, pixelPerfect) {
     this.canvas = canvas; 
     this.ctx = canvas.getContext("2d");
@@ -142,4 +135,5 @@ class GRAPHICS {
     }
     return "#" + convertHex(r) + convertHex(g) + convertHex(b);
   }
+
 }
